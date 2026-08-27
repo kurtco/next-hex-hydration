@@ -7,7 +7,7 @@ This project implements a modern frontend architecture built on **Next.js (App R
 - **React Server Components (RSC) & HTML Streaming via Suspense:**
   Data-fetching is executed directly on the server by consuming the **Rick and Morty API** (`https://rickandmortyapi.com/api/character`) through a dedicated repository (`createRickMortyCharacterRepository`). We leverage `<Suspense>` to stream the base UI structure instantly while delivering heavy fragments progressively.
 
-- **Domain Mapping & Zero-Fetch Hydration:**
+- **Domain Mapping & Zero-Fetch payload Hydration:**
   External data is mapped on the server (`mapCharacter`) to strictly match our application's domain entities (`Character`). This pre-processed data is injected into the initial HTML payload to pre-populate **Zustand** stores on the very first render (_zero-fetch initial load_), ensuring immediate client-side interactivity without duplicate network requests.
 
 ## Run locally
